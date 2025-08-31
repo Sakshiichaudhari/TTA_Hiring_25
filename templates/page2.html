@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Join WhatsApp Group</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <img src="{{ url_for('static', filename='logo.png') }}" class="logo" alt="Logo">
+    <h1>Team Third Axis</h1>
+    <h3>Join our WhatsApp Group</h3>
+
+    <!-- QR Code -->
+    <img src="{{ url_for('static', filename='whatsapp_qr.png') }}" class="qr" alt="QR Code">
+
+    <!-- WhatsApp Join Button -->
+    <a href="https://chat.whatsapp.com/DB9rzby7mk7Dd7nfFrxJiN" target="_blank">
+      <button type="button" class="whatsapp-btn">📲 Join WhatsApp Group</button>
+    </a>
+
+    <!-- Terms & Submit -->
+    <form action="/page2_submit" method="POST">
+      <!--label>
+        <input type="checkbox" required> I agree to Terms & Privacy Policy
+      </label><br-->
+      <button type="submit">Continue</button>
+    </form>
+  </div>
+</body>
+</html>

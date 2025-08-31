@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Team Third Axis - Recruitment</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <img src="{{ url_for('static', filename='logo.png') }}" class="logo" alt="Logo">
+    <h1>Team Third Axis</h1>
+    <h3>Recruitment Form</h3>
+
+    <form action="/submit" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="tel" name="phone" placeholder="Your Phone" required>
+
+      <label>Branch</label><br>
+      <input type="radio" name="branch" value="Civil" required> Civil<br>
+      <input type="radio" name="branch" value="Comp"> Computer<br>
+      <input type="radio" name="branch" value="Elec"> Electrical<br>
+      <input type="radio" name="branch" value="E&TC"> E&TC<br>
+      <input type="radio" name="branch" value="Instr"> Instrumentation<br>
+      <input type="radio" name="branch" value="Mech"> Mechanical<br>
+
+      <label>Year</label><br>
+      <input type="radio" name="year" value="FY" required> FY<br>
+      <input type="radio" name="year" value="SY"> SY<br>
+      <input type="radio" name="year" value="TY"> TY<br>
+      <input type="radio" name="year" value="LY"> LY<br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
